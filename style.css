@@ -1,0 +1,589 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************************/
+/********END_RESET********/
+/*************************/
+
+@font-face{
+	font-family: "Gill Sans";
+	src: url(fonts/Gill Sans.ttf)
+}
+
+@font-face{
+	font-family: "Savoye LET";
+	src: url(fonts/Savoye LET.ttf)
+}
+
+html{
+	font-family: "Gill Sans", Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+abbr{
+	text-decoration: none;
+}
+
+/******** INTRO ********/
+
+.intro header{
+	background-color: black;
+	height: 100vh;
+	color: white;
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+}
+
+/******* H1 ANIM *******/
+
+.intro header h1{
+	font-size: 60px;
+	font-weight: 700;
+	color: #ffd800;
+	letter-spacing: 0px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-top: 2em;
+	padding: 10px 0px 10px 0px;
+	-webkit-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+	border-top: 7px solid rgba(255,216,0,.4);
+	border-bottom: 7px solid rgba(255,216,0,.4);
+}
+
+
+.intro header h1:hover{
+	letter-spacing: 5px;
+	border-top: 7px solid rgba(255,216,1);
+	border-bottom: 7px solid rgba(255,216,1);
+	padding: 10px 20px 10px 20px;
+}
+
+
+/******* H1 ANIM END *******/
+
+.intro h2{
+	font-family: "Savoye LET";
+	font-size: 4em;
+	margin-top: .5em;
+	opacity: .4;
+	height: 50%;
+	background: url(img/intro_img.png) no-repeat;
+	background-size: 600px 600px;
+	background-position: center -90px;
+}
+
+/*** NAV ***/
+
+.design-archives h3{
+	display: none;
+}
+
+.design-archives nav{
+	position: absolute;
+	bottom: 0;
+	color: white;
+	height: 6em;
+	background-color: rgba(205,205,205,.2);
+	width: 100%;
+}
+
+.design-archives .next{
+	position: absolute;
+	right: 0;
+	height: 100%;
+	width: 25%;
+	background: url(img/next.png) no-repeat center;
+	background-size: 18px 40px;
+	border-left: 1px solid white;
+}
+
+
+.design-archives .next a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+	display: block;
+	height: 100%;
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	-webkit-transition: .4s ease;
+	-o-transition: .4s ease;
+	-ms-transition: .4s ease;
+	-moz-transition: .4s ease;
+	transition: .4s ease;
+}
+
+.design-archives .next a:hover{
+	background-color: rgba(205,205,205,.1);
+}
+
+.design-archives ul{
+	height: 100%;
+}
+
+.design-archives .viewall{
+	height: 100%;
+	width: 75%;
+	text-align: center;
+	font-weight: lighter;
+}
+
+.design-archives .viewall a{
+	color: white;
+	text-decoration: none;
+	font-size: 2.5em;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: .12em;
+	word-spacing: .2em;
+	padding-top: 18px;
+	display: block;
+	height: 70%;
+	-webkit-transition: .4s ease;
+	-o-transition: .4s ease;
+	-ms-transition: .4s ease;
+	-moz-transition: .4s ease;
+	transition: .4s ease;
+}
+
+.design-archives .viewall a:hover{
+	background-color: rgba(205,205,205,.1);
+
+}
+
+/****** NAV END *******/
+/**************************/
+
+.intro{
+	background-color: #4C4C4C;
+	position: relative;
+}
+
+.intro p{
+	color: white;
+	font-size: 2em;
+	font-weight: lighter;
+}
+
+
+.summary p+p{
+	box-sizing: border-box; /* QUESTION PROF */
+	border-top: 2px solid #ffd800;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.summary p+p a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-bottom: 1px solid white;
+	transition: .4s ease;
+}
+
+.summary p+p a:hover{
+	border-bottom: 1px solid #ffd800;
+}
+
+.summary p:first-child{
+	margin: 0 auto;
+	width: 450px;
+	padding: 2em 0 0 0;
+	position: relative;
+	letter-spacing: .01em;
+}
+
+.summary p:first-child:before{
+	content: "“";
+	font-size: 9em;
+	font-family: "Savoye LET";
+	position: absolute;
+	left: -60px;
+	top: 130px;
+	line-height: 0;
+	opacity: .4;
+}
+
+
+.preamble h3{
+	font-family: "Savoye LET";
+	padding-top: 1em;
+	color: white;
+	font-size: 4em;
+	text-align: center;
+	text-shadow: 1px 1px 2px black;
+	letter-spacing: .02em;
+}
+
+.preamble p{
+	display: block;
+	vertical-align: top;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	width: 600px;
+	line-height: 1.1em;
+	letter-spacing: .01em;
+}
+
+.preamble p+p+p{
+	padding-bottom: 3em;
+}
+
+/******** INTRO END ********/
+/*******************************/
+
+.main, .supporting{
+	position: relative;
+}
+
+.explanation{
+	background-color: #5F5F5F;
+	display: inline-block;
+	width: 100%;
+}
+
+.explanation h3, .participation h3, .benefits h3, .requirements h3{
+	font-family: "Savoye LET";
+	color: white;
+	font-size: 4em;
+	padding-top: 1em;
+	text-shadow: 1px 1px 2px black;
+	letter-spacing: .02em;
+	text-align: center;
+}
+
+.explanation h3:after, .participation h3:after, .benefits h3:after, .requirements h3:after{
+	content: "";
+	width: 400px;
+	border-bottom: 1px solid white;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: .5em;
+
+}
+
+.explanation p, .participation p, .benefits p, .requirements p{
+	color: white;
+	font-size: 2em;
+	font-weight: lighter;
+	line-height: 1.1em;
+	letter-spacing: 0.01em;
+	width: 600px;
+	margin: 0 auto;
+	margin-bottom: 1em;
+}
+
+.explanation p+p{
+	margin-bottom: 0em;
+}
+
+.participation{
+	background-color: #5F5F5F;
+	display: inline-block;
+	width: 100%;
+}
+
+
+.participation p a, .requirements p a{
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+	transition: .4s ease;
+}
+
+.participation p a:hover, .requirements p a:hover{
+	border-bottom: 1px solid #ffd800;
+}
+
+.benefits{
+	background-color: #5F5F5F;
+	display: inline-block;
+	width: 100%;
+}
+
+.requirements{
+	background-color: #868686;
+	display: inline-block;
+	width: 100%;
+}
+
+p[role="contentinfo"]{
+	box-sizing: border-box;
+	background-color: #5F5F5F;
+	text-align: center;
+	padding: .7em;
+	border-radius: 20px 0 20px 0;
+}
+
+p[role="contentinfo"] a:first-child{
+	font-weight: normal;
+}
+
+p[role="contentinfo"] a:nth-child(2), p[role="contentinfo"] a:nth-child(3){
+	font-style: italic;
+}
+
+/****FOOTER****/
+
+.main footer{
+	background-color: black;
+	height: 10em;
+	text-align: center;
+}
+
+.main footer a{
+	color: white;
+	display: inline-block;
+	margin-top: 2em;
+	height: 60px;
+	width: 60px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	transition: .4s ease;
+}
+
+
+.main footer a:first-child{
+	background: url(img/html5_logo.png) no-repeat;
+	background-size: 50px 56px;
+	transition: background-image .5s ease;
+}
+
+.main footer a:first-child:hover{
+	background: url(img/html5_logo_hover.png) no-repeat;
+	background-size: 50px 56px;
+}
+
+.main footer a:nth-child(2){
+	background: url(img/css3_logo.png) no-repeat;
+	background-size: 50px 56px;
+}
+
+.main footer a:nth-child(2):hover{
+	background: url(img/css3_logo_hover.png) no-repeat;
+	background-size: 50px 56px;
+}
+
+.main footer a:nth-child(3){
+	background: url(img/cc_logo.png) no-repeat;
+	background-size: 56px 56px;
+}
+
+.main footer a:nth-child(3):hover{
+	background: url(img/cc_logo_hover.png) no-repeat;
+	background-size: 56px 56px;
+}
+
+.main footer a:nth-child(4){
+	background: url(img/access_logo.png) no-repeat;
+	background-size: 56px 56px;
+}
+
+.main footer a:nth-child(4):hover{
+	background: url(img/access_logo_hover.png) no-repeat;
+	background-size: 56px 56px;
+}
+
+.main footer a:nth-child(5){
+	background: url(img/github_logo.png) no-repeat;
+	background-size: 56px 56px;
+}
+
+.main footer a:nth-child(5):hover{
+	background: url(img/github_logo_hover.png) no-repeat;
+	background-size: 56px 56px;
+}
+
+/****** END FOOTER *****/
+/******* END MAIN *******/
+
+/.sidebar{
+	position: relative;
+}
+
+/***** ASIDE *****/
+
+.zen-resources h3{
+	display: none;
+}
+
+.zen-resources ul{
+	display: table;
+	width: 100%;
+	background-color: #5F5F5F;
+}
+
+.zen-resources li{
+	display: table-cell;
+	background-color: #5F5F5F;
+	width: 20%;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+	transition: .5s ease;
+	border-right: 1px solid #D1D1D1;
+	border-top: 3px solid #D1D1D1;
+}
+
+.zen-resources li:last-child{
+	border-right: none;
+}
+
+.zen-resources li a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.6em;
+	font-weight: lighter;
+	display: inline-block;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	width: 100%;
+}
+
+.zen-resources li:hover{
+	width: 30%;
+	background-color: #868686;
+}
+
+/**** SELECT A DESIGN ******/
+
+.design-selection nav{
+	display: block;
+	width: 100%;
+	background-color: #4C4C4C;
+}
+
+.design-selection ul{
+	color: white;
+	font-weight: lighter;
+	font-size: 1.5em;
+	padding: 1em 0 1em 0;
+	width: 600px;
+	margin: 0 auto;
+	font-style: italic;
+
+}
+
+.design-selection ul a{
+	text-decoration: none;
+	color: white;
+	font-style: normal;
+}
+
+.design-selection ul a:first-child{
+	font-size: 1.3em;
+}
+
+.design-selection ul li a:first-child:after{
+	display: block;
+	content: "\A0";
+	line-height: 0;
+}
+
+.design-selection ul li a:last-child{
+	font-weight: normal;
+}
+
+.design-selection ul a:hover{
+	border-bottom: 1px solid #ffd800;
+
+}
+
+.design-selection h3{
+	font-family: "Savoye LET";
+	color: white;
+	font-size: 4em;
+	line-height: 0em;
+	padding-top: 1em;
+	text-shadow: 1px 1px 2px black;
+	letter-spacing: .02em;
+	text-align: center;
+	background-color: #4C4C4C;
+}
+
+.design-selection h3:after{
+	content: "";
+	width: 400px;
+	border-bottom: 1px solid white;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: .5em;
+
+}
+
+.design-selection ul li{
+	display: inline-block;
+	width: 49%;
+	padding: 1em 0 1em 0;
+	transition: .4s ease;
+	text-align: center;
+}
+
+.design-selection ul li:hover{
+	display: inline-block;
+	width: 49%;
+	padding: 1em 0 1em 0;
+	background-color: #5F5F5F;
+
+}
+
+.design-selection ul li:nth-child(even){
+	text-align: center;
+}
